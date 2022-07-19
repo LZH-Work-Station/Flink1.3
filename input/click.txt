@@ -1,0 +1,9 @@
+Marry, ./home, 1000
+Bob, ./cart, 2000
+Alice, ./prod?id=100, 3000
+Bob, ./home, 4000
+Marry, ./home, 5000
+Marry, ./home, 1000
+Bob, ./cart, 2000
+Alice, ./prod?id=100, 3000
+Bob, ./home, 4000
