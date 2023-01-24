@@ -86,7 +86,7 @@ stream.windowAll(TumblingEventTimeWindows.of(Time.hours(1)))
 ### 归约函数（Input和Output数据类型一致）
 
 ```java
-stream.map(new MapFunction<Event, Tuple2<String, Long>>() {
+ stream.map(new MapFunction<Event, Tuple2<String, Long>>() {
             @Override
             public Tuple2<String, Long> map(Event value) throws Exception {
                 return new Tuple2<>(value.user, 1L);
