@@ -15,3 +15,13 @@
 3. source完成snapshot的快照后将barrier发送给下游，然后source继续开始读取数据
 4. 下游会等到上游的barrier都到齐了才会继续传送barrier，例如如果source1的barrier到了而source2的barrier没到就需要等待。如果这个时候source1有新的数据到来，那么我们就不处理，因为这个时候就已经不属于这个snapshot的数据了，而只要source2的barrier没到，source2的数据就需要处理。
 5. 等到所有的上游任务的barrier全部到达，就会进行checkpoint的保存，然后发送barrier到下游。
+
+## 3. 重写检查点方法
+
+重写CheckpointedFunction接口
+
+## 4. 从保存点指定重启
+
+- -s 后面加上保存点保存路径
+
+![image-20230228232615149](images/image-20230228232615149.png)
